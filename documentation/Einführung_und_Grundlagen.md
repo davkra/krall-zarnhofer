@@ -11,6 +11,7 @@ Continuous Integration, Continuous Delivery und Continuous Deployment sind aufba
 - **Continuous Deployment:** Die Schritte in Continuous Deployment sind die gleichen wie in Continuous Delivery mit dem Unterschied, dass das Endprodukt *automatisch* an Kunden überliefert und auf Produktivsystemen installiert wird.
 
 >![Unterschied zwischen Continuous Integration, Continuous Delivery und Continuous Deployment](./images/ci_vs_cd_vs_cd.png)
+>
 >Unterschied zwischen Continuous Integration, Continuous Delivery und Continuous Deployment
 
 ## Anti Patterns

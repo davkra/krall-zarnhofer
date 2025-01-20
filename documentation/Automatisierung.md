@@ -46,3 +46,4 @@ Als Basis wird Ubuntu mit der Version 24.04 verwendet.
 
 - [https://docs.pytest.org/en/stable/](https://docs.pytest.org/en/stable/)
 - [https://github.com/davkra/krall-zarnhofer/actions](https://github.com/davkra/krall-zarnhofer/actions)
+- [https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python)
