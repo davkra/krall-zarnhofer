@@ -40,7 +40,7 @@ Als Basis wird Ubuntu mit der Version 24.04 verwendet.
 5. Tests mit [pytest](https://docs.pytest.org/en/stable/) durchführen
 6. Python Programm starten
 7. Package des Python Programms erstellen
-8. Package auf GitHub bereitstellen
+8. Package auf GitHub bereitstellen, jedoch nur falls auf den `main`-Branch gepusht wird
 
 ## Referenzen
 
