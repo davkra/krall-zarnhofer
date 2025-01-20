@@ -50,10 +50,10 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 - [ ] Deployment-Strategien identifizieren
 - [ ] Rollback-Strategien (optional)
 
-### 10% Containerisierung
+### [10% Containerisierung](./documentation/Containerisierung.md)
 
-- [ ] Docker oder ähnliche Technologien eingesetzt
-- [ ] Integration in eine Build-Pipeline
+- [x] Docker oder ähnliche Technologien eingesetzt
+- [x] Integration in eine Build-Pipeline
 
 ### 20% Infrastruktur- und Konfigurationsmanagement
 

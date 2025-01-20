@@ -1,0 +1,9 @@
+# IDEs
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+.pytest_cache/
+calculator.egg-info
+dist/
