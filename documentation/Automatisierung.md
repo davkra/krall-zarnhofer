@@ -29,6 +29,8 @@ Als Vorlage wurde die GitHub Action `Python application` verwendet.
 
 ### Steps
 
+Als Basis wird Ubuntu mit der Version 24.04 verwendet.
+
 >*This workflow will install Python dependencies, run tests and lint with a single version of Python*
 
 1. [Git checkout](https://github.com/actions/checkout/tree/v4/)
@@ -37,6 +39,8 @@ Als Vorlage wurde die GitHub Action `Python application` verwendet.
 4. [Flake8](https://pypi.org/project/flake8/) benutzen, um Syntax oder Code Style Fehler zu finden
 5. Tests mit [pytest](https://docs.pytest.org/en/stable/) durchführen
 6. Python Programm starten
+7. Package des Python Programms erstellen
+8. Package auf GitHub bereitstellen, jedoch nur falls auf den `main`-Branch gepusht wird
 
 ## Referenzen
 
