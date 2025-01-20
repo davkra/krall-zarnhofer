@@ -72,6 +72,8 @@ git remote set-url --add --push origin https://git-iit.fh-joanneum.at/msd-contde
 git remote set-url --add --push origin https://github.com/davkra/krall-zarnhofer.git
 ```
 
+The two scripts [gitsetup.sh](./gitsetup.sh) and [gitsetup.cmd](./gitsetup.cmd) (depending on the operating system) can be used to correctly configure the repository after cloning it.
+
 ### Installation
 
 1. Clone the repository:

@@ -23,14 +23,14 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 - [x] Unterschiede zwischen Continuous Integration, Continuous Delivery und Continuous Deployment
 - [x] CI-Anti Pattern identifizieren
 
-### 20% Projekt Setup
+### [20% Projekt Setup](./documentation/Projekt_Setup.md)
 
-- [ ] Initialisierung des Repository (Git) -> (Blank Project + Project Name = Nachname)
-- [ ] Checkliste kopieren und in neues geklontes Repository/project einfügen
-- [ ] Checkliste versionieren
-- [ ] README anfertigen mit Verlinkungen, Hinweisen, etc. zum Inhalt des Repository
-- [ ] zweites Repository für Übungen, Ausprobieren, etc. inkl. README sowie Verlinkungen und Übersicht zu den Übungen
-- [ ] .gitignore angepasst: Stelle sicher, dass unnötige Dateien nicht im Repository landen (z. B. durch ein angepasstes .gitignore-File).
+- [x] Initialisierung des Repository (Git) -> (Blank Project + Project Name = Nachname)
+- [x] Checkliste kopieren und in neues geklontes Repository/project einfügen
+- [x] Checkliste versionieren
+- [x] README anfertigen mit Verlinkungen, Hinweisen, etc. zum Inhalt des Repository
+- [x] zweites Repository für Übungen, Ausprobieren, etc. inkl. README sowie Verlinkungen und Übersicht zu den Übungen
+- [x] .gitignore angepasst: Stelle sicher, dass unnötige Dateien nicht im Repository landen (z. B. durch ein angepasstes .gitignore-File).
 
 ### 10% Automatisierung
 
