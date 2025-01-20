@@ -32,7 +32,7 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 - [x] zweites Repository für Übungen, Ausprobieren, etc. inkl. README sowie Verlinkungen und Übersicht zu den Übungen
 - [x] .gitignore angepasst: Stelle sicher, dass unnötige Dateien nicht im Repository landen (z. B. durch ein angepasstes .gitignore-File).
 
-### 10% Automatisierung
+### 10% [Automatisierung](./documentation/Automatisierung.md)
 
 - [ ] Automatisierte Builds eingerichtet
 - [ ] Automatisierte Tests implementiert
