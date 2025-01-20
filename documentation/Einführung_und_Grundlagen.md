@@ -19,6 +19,7 @@ Hier ist eine Liste an Anti Patterns, welche durch diverse Vorgehensweisen behob
 
 - **Infrequent Check-In:** Source Code bleibt im lokalen Git Repository für zu lange Zeit. *Lösung:* Nach Absprache wird in diesem Projekt eine *trunked based* Git workflow verwendet, sodass mehr Übersicht über den Projektstand besteht. Zusätzlich werden immer nur kleine Änderungen (dafür häufiger) in Git gepusht.
 - **Bottleneck Commits:** Code Änderungen werden nicht gepusht wodurch es zu Verzögerungen beim Testen und Integrieren der Software gibt. *Lösung:* Der Source Stand wird häufig aktualisiert und lokale Tests eingerichtet, damit der Code auch getestet werden kann, bevor die automatischen Tests gestartet werden.
+- **Works on my Machine:** Durch verschiedene Compiler Versionen oder unterschiedlich Betriebssysteme funktioniert die Software nicht auf jedem Gerät auf die selbe Weise. *Lösung:* Durch die Verwendung von Docker kann die Software containerisiert werden. Damit ist die Software mehr oder weniger plattformunabhängig, solange Docker auf dem Gerät installiert ist.
 
 ## Referenzen
 
