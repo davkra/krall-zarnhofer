@@ -27,3 +27,11 @@ Mit `exit` kann der Container verlassen werden, wobei dieser im Anschluss zerst�
 ### Docker ignore
 
 Damit Docker gewisse Dateien ignoriert und nicht in das Image kopiert, kann eine `.dockerignore` Datei angelegt werden, welche ähnlich wie eine `.gitignore` Datei funktioniert.
+
+## Docker in GitHub Actions
+
+Für den GitHub workflow wird aktuell ein Ubuntu Base Image der Version 24.04 verwendet. Diese Information kann aus der [python-app.yml](../.github/workflows/python-app.yml) Datei entnommen werden.
+
+```yml
+    runs-on: ubuntu-24.04
+```
