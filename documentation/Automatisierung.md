@@ -39,6 +39,8 @@ Als Basis wird Ubuntu mit der Version 24.04 verwendet.
 4. [Flake8](https://pypi.org/project/flake8/) benutzen, um Syntax oder Code Style Fehler zu finden
 5. Tests mit [pytest](https://docs.pytest.org/en/stable/) durchführen
 6. Python Programm starten
+7. Package des Python Programms erstellen
+8. Package auf GitHub bereitstellen
 
 ## Referenzen
 
