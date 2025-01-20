@@ -1,5 +1,13 @@
+def hello():
+    return "Hello world!"
+
+
+def hello_world():
+    return "Hello, World!"
+
+
 def main():
-    print("Hello world!")
+    print(hello())
 
 
 if __name__ == "__main__":
