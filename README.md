@@ -5,7 +5,7 @@ Daniel Zarnhofer
 
 ---
 
-> Das GitLab Repository dieses Projekts ist nicht das Hauptrepository.  
+> Das [GitLab Repository](https://git-iit.fh-joanneum.at/msd-contdel/techdemo-ws24/krall-zarnhofer) dieses Projekts ist nicht das Hauptrepository.  
 > Das Hauptrepository befindet sich auf GitHub unter: [https://github.com/davkra/krall-zarnhofer](https://github.com/davkra/krall-zarnhofer) und wird [mit diesem Repository gespiegelt.](#prerequisites)
 
 ## Table of Contents
