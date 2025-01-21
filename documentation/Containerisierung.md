@@ -53,3 +53,5 @@ Für den GitHub workflow wird aktuell ein Ubuntu Base Image der Version 24.04 ve
 
 - [https://elliottback.medium.com/python-this-environment-is-externally-managed-error-and-docker-6062aac20a6e](https://elliottback.medium.com/python-this-environment-is-externally-managed-error-and-docker-6062aac20a6e)
 - [https://stackoverflow.com/questions/68673221/warning-running-pip-as-the-root-user](https://stackoverflow.com/questions/68673221/warning-running-pip-as-the-root-user)
+- [https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md](https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md)
+- [https://stackoverflow.com/questions/14639001/command-not-working-as-expected-if-run-via-bin-sh-c](https://stackoverflow.com/questions/14639001/command-not-working-as-expected-if-run-via-bin-sh-c)
