@@ -22,7 +22,14 @@ def main():
 
 
 if __name__ == "__main__":
+  try:
     data = json.loads(sys.stdin.read())
+  except json.JSONDecodeError:
+    data = None
+
+  if not data:
+    main()
+  else:
     num1 = float(data["num1"])
     num2 = float(data["num2"])
     operation = data["operation"]
