@@ -1,9 +1,16 @@
-FROM python:3.10.12
+FROM alpine:latest
 
-WORKDIR /calculator
+WORKDIR /app
+
+RUN apk update && apk upgrade
+RUN apk add --no-cache nodejs npm python3 py3-pip
+
+RUN python -m venv /app/venv && \
+  . /app/venv/bin/activate && \
+  pip install pytest build
 
 COPY calculator .
 
-RUN pip install pytest build
+ENV PATH="/app/venv/bin:$PATH"
 
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/bin/sh" ]

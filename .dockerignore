@@ -7,3 +7,6 @@ __pycache__/
 .pytest_cache/
 calculator.egg-info
 dist/
+
+# Node
+node_modules/
