@@ -39,7 +39,7 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 - [x] Automatisierte Deployments konfiguriert
 - [x] Automatisierte Code-Qualitätsanalyse: Setze statische Code-Analyse-Tools ein, um Codequalität automatisiert zu überprüfen.
 
-### 10% Testing
+### [10% Testing](./documentation/Testing.md)
 
 - [ ] (Unit) Tests geschrieben und automatisiert
 - [ ] Integrationstests implementiert (optional)
