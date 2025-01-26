@@ -45,9 +45,9 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 - [ ] Integrationstests implementiert (optional)
 - [ ] End-to-End Tests eingerichtet (optional)
 
-### Deployment-Strategien
+### [Deployment-Strategien](./documentation/Deployment-Strategien.md)
 
-- [ ] Deployment-Strategien identifizieren
+- [x] Deployment-Strategien identifizieren
 - [ ] Rollback-Strategien (optional)
 
 ### [10% Containerisierung](./documentation/Containerisierung.md)
