@@ -55,12 +55,12 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 - [x] Docker oder ähnliche Technologien eingesetzt
 - [x] Integration in eine Build-Pipeline
 
-### 20% Infrastruktur- und Konfigurationsmanagement
+### [20% Infrastruktur- und Konfigurationsmanagement](./documentation/Infrastruktur_und_Konfigurationsmanagement.md)
 
-- [ ] Template Konfigurationsdateien versioniert und zentralisiert
-- [ ] Konfigurationsdateien ausgenommen
+- [x] Template Konfigurationsdateien versioniert und zentralisiert
+- [x] Konfigurationsdateien ausgenommen
 - [ ] Verwendung in einer Build-Pipeline
-- [ ] Infrastructure as Code (IaC): Nutze Tools wie Terraform oder Ansible, um die Infrastruktur als Code zu verwalten und sicherzustellen, dass Deployments wiederholbar sind.
+- [x] Infrastructure as Code (IaC): Nutze Tools wie Terraform oder Ansible, um die Infrastruktur als Code zu verwalten und sicherzustellen, dass Deployments wiederholbar sind.
 
 ### 10% Sicherheit
 
