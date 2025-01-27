@@ -14,11 +14,23 @@ def subtraction(num1, num2):
     return num1 - num2
 
 
+def multiplication(num1, num2):
+    return num1 * num2
+
+
+def division(num1, num2):
+    return num1 / num2
+
+
 def calculate(num1, num2, operation):
     if operation == "add":
         return addition(num1, num2)
     elif operation == "subtract":
         return subtraction(num1, num2)
+    elif operation == "multiply":
+        return multiplication(num1, num2)
+    elif operation == "divide":
+        return division(num1, num2) if num2 != 0 else "Error: Division by zero"
 
 
 def main():
