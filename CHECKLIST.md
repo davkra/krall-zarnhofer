@@ -39,11 +39,11 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 - [x] Automatisierte Deployments konfiguriert
 - [x] Automatisierte Code-Qualitätsanalyse: Setze statische Code-Analyse-Tools ein, um Codequalität automatisiert zu überprüfen.
 
-### 10% Testing
+### [10% Testing](./documentation/Testing.md)
 
-- [ ] (Unit) Tests geschrieben und automatisiert
-- [ ] Integrationstests implementiert (optional)
-- [ ] End-to-End Tests eingerichtet (optional)
+- [x] (Unit) Tests geschrieben und automatisiert
+- [x] Integrationstests implementiert (optional)
+- [x] End-to-End Tests eingerichtet (optional)
 
 ### [Deployment-Strategien](./documentation/Deployment-Strategien.md)
 
@@ -64,7 +64,7 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 
 ### 10% Sicherheit
 
-- [ ] Zugangsdaten sicher hinterlegt
+- [x] Zugangsdaten sicher hinterlegt
 - [ ] Sicherheitsüberprüfungen: Integriere automatisierte Sicherheitstests (z. B. OWASP ZAP) in die Pipeline, um potenzielle Sicherheitslücken frühzeitig zu erkennen.
 
 ### Datenbanken

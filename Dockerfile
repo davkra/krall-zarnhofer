@@ -9,6 +9,6 @@ RUN npm install
 
 RUN python -m venv /env && \
   . /env/bin/activate && \
-  pip install pytest build
+  pip install pytest build coverage
 
 ENV PATH="/env/bin:$PATH"
