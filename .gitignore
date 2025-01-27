@@ -4,6 +4,7 @@
 
 # Python
 __pycache__/
+.coverage
 .pytest_cache/
 calculator.egg-info
 dist/
