@@ -69,10 +69,6 @@ jobs:
       working-directory: ./calculator
       run: |
         python calculator.py
-    - name: Package calculator
-      working-directory: ./calculator
-      run: |
-        python -m build
 
   deploy:
     runs-on: ubuntu-24.04
@@ -90,6 +86,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install build
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Package calculator
+      working-directory: ./calculator
+      run: |
+        python -m build
     - name: Deploy package as artifact
       if: github.ref == 'refs/heads/main'
       uses: actions/upload-artifact@v4
