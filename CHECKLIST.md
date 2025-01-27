@@ -41,9 +41,9 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 
 ### [10% Testing](./documentation/Testing.md)
 
-- [ ] (Unit) Tests geschrieben und automatisiert
-- [ ] Integrationstests implementiert (optional)
-- [ ] End-to-End Tests eingerichtet (optional)
+- [x] (Unit) Tests geschrieben und automatisiert
+- [x] Integrationstests implementiert (optional)
+- [x] End-to-End Tests eingerichtet (optional)
 
 ### Deployment-Strategien
 
