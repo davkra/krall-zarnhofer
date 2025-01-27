@@ -64,7 +64,7 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 
 ### 10% Sicherheit
 
-- [ ] Zugangsdaten sicher hinterlegt
+- [x] Zugangsdaten sicher hinterlegt
 - [ ] Sicherheitsüberprüfungen: Integriere automatisierte Sicherheitstests (z. B. OWASP ZAP) in die Pipeline, um potenzielle Sicherheitslücken frühzeitig zu erkennen.
 
 ### Datenbanken
