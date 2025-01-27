@@ -122,13 +122,13 @@ Jobs: `test`, `build`, `deploy`
       1. `Code Checkout`
       2. `Install dependencies` (flake8 pytest coverage) mit pip
       3. `Run hello world` Hello world program aus dem calculator ausführen
-      4. `Package calculator` Python wheel package erstellen
-3. `deploy`
+3. `deploy` (nur bei push auf den Main Branch)
    - verwendet `ubuntu-24.04`
    - Steps:
       1. `Code Checkout`
       2. `Install dependencies` (flake8 pytest coverage) mit pip
-      3. `Deploy package as artifact` zuvor erstelltes wheel package auf GitHub hochladen
-      4. `Log in to Docker Hub` auf Docker Hub anmelden (mit Hilfe von GitHub Secrets)
-      5. `Build Docker image` Docker Image der Calculator App erstellen
-      6. `Push Docker image` docker Image auf Docker Hub pushen (mit Hilfe von GitHub Secrets)
+      3. `Package calculator` Python wheel package erstellen
+      4. `Deploy package as artifact` zuvor erstelltes wheel package auf GitHub hochladen
+      5. `Log in to Docker Hub` auf Docker Hub anmelden (mit Hilfe von GitHub Secrets)
+      6. `Build Docker image` Docker Image der Calculator App erstellen
+      7. `Push Docker image` docker Image auf Docker Hub pushen (mit Hilfe von GitHub Secrets)
