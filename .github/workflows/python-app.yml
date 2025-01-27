@@ -37,14 +37,14 @@ jobs:
       working-directory: ./calculator
       run: |
         python -m pytest
+    - name: Run Unit tests
+      working-directory: ./calculator
+      run: |
+            python -m unittest discover -s tests/unit
     - name: Run Integration tests
       working-directory: ./calculator
       run: |
-        python -m unittest discover -s tests/unit
-        - name: Run Unit tests
-        working-directory: ./calculator
-        run: |
-          python -m unittest discover -s tests/integration
+        python -m unittest discover -s tests/integration
     - name: Run code coverage
       working-directory: ./calculator
       run: |
