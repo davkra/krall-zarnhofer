@@ -6,53 +6,46 @@ Daniel Zarnhofer
 ---
 
 > Das [GitLab Repository](https://git-iit.fh-joanneum.at/msd-contdel/techdemo-ws24/krall-zarnhofer) dieses Projekts ist nicht das Hauptrepository.  
-> Das Hauptrepository befindet sich auf GitHub unter: [https://github.com/davkra/krall-zarnhofer](https://github.com/davkra/krall-zarnhofer) und wird [mit diesem Repository gespiegelt.](#prerequisites)
+> Das Hauptrepository befindet sich auf GitHub unter: [https://github.com/davkra/krall-zarnhofer](https://github.com/davkra/krall-zarnhofer) und wird [mit diesem Repository gespiegelt.](#voraussetzungen)
 
 ## Table of Contents
 
 - [TechDemo: Continuous Delivery Integration](#techdemo-continuous-delivery-integration)
   - [Table of Contents](#table-of-contents)
   - [Checklist](#checklist)
-  - [Introduction](#introduction)
-  - [Objective](#objective)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+  - [Einleitung](#einleitung)
+  - [Ziel](#ziel)
+  - [Voraussetzungen](#voraussetzungen)
+    - [Branching Strategie](#branching-strategie)
   - [Usage](#usage)
   - [Tech Stack](#tech-stack)
-  - [Testing](#testing)
-  - [Continuous Delivery Workflow](#continuous-delivery-workflow)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+  - [Pipeline-Dokumentation](#pipeline-dokumentation)
 
 ## Checklist
 
-For a detailed list of tasks and goals, refer to the [Checkliste](./CHECKLIST.md). This document serves as a guide to ensure all relevant CD aspects are integrated into this demo.
+Für eine genauere Liste an Aufgaben und Zielen, bitte die [Checkliste](./CHECKLIST.md) öffnen. Diese dient als Grundlage für alle relevanten CD Aspekte, die in dieser Demo implementiert wurden.
 
-## Introduction
+## Einleitung
 
-This repository serves as a guide for the TechDemo of the Continuous Delivery (CD) course. It focuses on integrating CD principles into an existing software project rather than developing new software from scratch. The aim is to demonstrate automated builds, tests, and deployments in a real-world scenario.
+Dieses Repository dient als Vorlage für die TechDemo des Continuous Delivery (CD) Kurses. Der Fokus liegt auf der Integration von CD Prinzipien in existierende Software, anstatt neue Software von Neuem zu erstellen. Das Ziel ist eine Demonstration vom automatischen Builden, Testen und Ausliefern in einem Software Entwicklungs Szenario.
 
-## Objective
+## Ziel
 
-The main objective is to apply CD practices by automating key processes, ensuring a smoother and more efficient software development lifecycle. This includes:
+Das Hauptziel sind CD Praktiken zur Automatisierung von Prozessen, um einen besseren und effizienteren Software Development Lebenszyklus zu gewährleisten. Dazu zählen:
 
-- Automated builds with build tools.
-- Automated testing with unit, integration, and end-to-end tests.
-- Continuous deployment to production-like environments.
+- Automatisierte Builds mit Build Tools.
+- Automatisierte Tests mit Unit, Integration, und End-to-End tests.
+- Continuous deployment auf eine Produktiv System.
 
-## Getting Started
+## Voraussetzungen
 
-### Prerequisites
+Die folgende Software wird in diesem Projekt verwendet:
 
-Ensure the following software and tools are installed:
+- **Git**: Versionskontrolle.
+- **Python und Node.js**: Für die Entwicklung einer Calculator App.
+- **Docker**: Zur Containerisierung.
 
-- **Git**: Version control.
-- **Java JDK / Python / Node.js**: Depending on the tech stack used in your project.
-- **Docker** (optional): For containerized deployments.
-
-Furthermore both the main and the mirror repository need to be added to the local Git workspace. This is necessary in case new code needs to be pushed to the remote repository.
+Außerdem müssen sowohl das Haupt als auch das Spiegel Repository konfiguriert werden. Dies ist notwendig, falls Code Änderungen gepusht werden sollen.
 
 ```bash
 # Mirror Repository
@@ -62,7 +55,7 @@ git remote set-url --add --push origin git@git-iit.fh-joanneum.at:msd-contdel/te
 git remote set-url --add --push origin git@github.com:davkra/krall-zarnhofer.git
 ```
 
-These remotes depend on correct configurations of SSH-key. Alternatively the repositories can also be added via https:
+Diese Remotes benötigen SSH-Key zur Verbindung über SSH. Alternative können die Remotes auch via https hinzugefügt werden:
 
 ```bash
 # Mirror Repository
@@ -72,88 +65,70 @@ git remote set-url --add --push origin https://git-iit.fh-joanneum.at/msd-contde
 git remote set-url --add --push origin https://github.com/davkra/krall-zarnhofer.git
 ```
 
-The two scripts [gitsetup.sh](./gitsetup.sh) and [gitsetup.cmd](./gitsetup.cmd) (depending on the operating system) can be used to correctly configure the repository after cloning it.
+Die beiden Skripte [gitsetup.sh](./gitsetup.sh) und [gitsetup.cmd](./gitsetup.cmd) (je nach Betriebssystem) können verwendet werden, um die Konfiguration durchzuführen, nachdem dieses geclont wurde.
 
-### Installation
+### Branching Strategie
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/continuous-delivery-techdemo.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd continuous-delivery-techdemo
-   ```
-
-3. Install dependencies:
-   - For Node.js:
-
-     ```bash
-     npm install
-     ```
-
-   - For Python:
-
-     ```bash
-     pip install -r requirements.txt
-     ```
-
-   - For Java:
-
-     ```bash
-     mvn install
-     ```
+Als Branching Strategie bzw. Git Workflow wurde ein Trunked based flow gewählt. Dabei handelt es sich um einen main Branch, auf welchen alle Code Änderungen gepusht werden. Einzelne Feature Branches sollen möglichst rasch gemergt werden, damit eine CD Pipeline optimal genutzt werden kann.
 
 ## Usage
 
-1. **Build the project**:
-   - Java: `mvn clean install`
-   - Python: `python setup.py build`
-   - JavaScript: `npm run build`
+Bei dem Projekt handelt es sich um einen einfachen Taschenrechner, welcher in Python implementiert ist und anschließend mit Hilfe von JavaScript in einer Node Umgebung als Web-App läuft.
 
-2. **Run the tests**:
-   - Execute unit and integration tests to verify the functionality.
+1. **Projekt Kompilieren und Starten**:
 
-3. **Deploy the project**: The deployment is automated through the provided scripts or configured CI/CD pipeline.
+   ```bash
+   ./_test/run_node.sh
+   ```
+
+   Alternative kann auch die DockerHub Version verwendet werden:
+
+   ```bash
+   docker run --rm -it --init -p 8080:3000 --name calculator --hostname calculator dkralledu/calculator sh -c 'npm start'
+   ```
+
+2. **Tests starten**:
+
+   ```bash
+   ./_test/run_<pytest|unittest|integrationtest>.sh
+   ```
 
 ## Tech Stack
 
-- **Primary Language**: Java, Python, JavaScript (choose based on your project).
-- **Build Tools**: Maven, Pip, NPM.
-- **Testing Frameworks**: JUnit, pytest, Jest.
-- **CI/CD**: Jenkins, GitHub Actions.
+- **Programmiersprachen**: Python, JavaScript
+- **Build Tools**: Pip, NPM.
+- **Testing Frameworks**: pytest, unittest.
+- **CI/CD**: GitHub Actions.
 
-## Testing
+## Pipeline-Dokumentation
 
-To ensure high-quality code, testing is integrated throughout the development process. You can run the following test suites:
+`.github/workflows/calculator.yml`:
 
-1. **Unit Tests**: Validating individual components.
-2. **Integration Tests**: Ensuring modules work together.
-3. **End-to-End Tests**: Testing complete workflows.
+Jobs: `test`, `build`, `deploy`
 
-   ```bash
-   npm test
-   ```
-
-## Continuous Delivery Workflow
-
-The following CD practices are integrated into this project:
-
-- **Automated Builds**: Triggered on every commit.
-- **Automated Tests**: Running unit, integration, and e2e tests.
-- **Continuous Deployment**: Deployments to a staging environment with approval steps for production deployment.
-
-## Contributing
-
-We welcome contributions. Please follow the **TODO** [contributing guidelines](./CONTRIBUTING.md) for submitting issues and pull requests.
-
-## License
-
-This project is licensed under the MIT License. See the **TODO** [LICENSE](./LICENSE.md) file for details.
-
-## Contact
-
-For any inquiries or issues, please reach out to [michael.ulm@fh-joanneum.at](mailto:michael.ulm@fh-joanneum.at).
+1. `test`
+   - verwendet `ubuntu-24.04`
+   - Steps:
+      1. `Code Checkout`
+      2. `Install dependencies` (flake8 pytest coverage) mit pip
+      3. `Lint with flake8` Code check für syntax oder Code Style Fehler
+      4. `Run pytest` pytest mit Python im Verzeichnis `calculator` ausführen
+      5. `Run Unit tests` Unit Tests mit Python im Verzeichnis `calculator`ausführen
+      6. `Run Integration tests` Integrations Tests mit Python im Verzeichnis `calculator` ausführen
+      7. `Run code coverage` Code Coverage mit Python durchführen und Ergebnisse reporten
+2. `build`
+   - verwendet `ubuntu-24.04`
+   - Steps:
+      1. `Code Checkout`
+      2. `Install dependencies` (flake8 pytest coverage) mit pip
+      3. `Run hello world` Hello world program aus dem calculator ausführen
+      4. `Package calculator` Python wheel package erstellen
+3. `deploy`
+   - verwendet `ubuntu-24.04`
+   - Steps:
+      1. `Code Checkout`
+      2. `Install dependencies` (flake8 pytest coverage) mit pip
+      3. `Deploy package as artifact` zuvor erstelltes wheel package auf GitHub hochladen
+      4. `Log in to Docker Hub` auf Docker Hub anmelden (mit Hilfe von GitHub Secrets)
+      5. `Build Docker image` Docker Image der Calculator App erstellen
+      6. `Push Docker image` docker Image auf Docker Hub pushen (mit Hilfe von GitHub Secrets)
