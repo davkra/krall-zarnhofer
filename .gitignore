@@ -1,6 +1,7 @@
 # IDEs
 .idea/
 .vscode/
+.vs/
 
 # Python
 __pycache__/
@@ -11,3 +12,13 @@ dist/
 
 # Node
 node_modules/
+
+# Terraform
+.terraform*
+*.tfstate*
+
+# Ansible
+hosts.ini
+
+# AWS
+credentials

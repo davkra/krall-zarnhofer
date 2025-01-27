@@ -1,0 +1,33 @@
+---
+- name: Set up a Node.js application on AWS EC2
+  hosts: aws_instances
+  become: yes
+  tasks:
+    - name: Update the system packages
+      yum:
+        name: "*"
+        state: latest
+
+    - name: Install Node.js and npm
+      yum:
+        name:
+          - nodejs
+          - npm
+        state: present
+    
+    - name: Copy the calculator app folder
+      copy:
+          src: ./calculator/
+          dest: /home/ec2-user/calculator
+          owner: ec2-user
+          group: ec2-user
+          mode: '0755'
+
+    - name: Run npm install
+      command: 
+        cmd: npm install
+        chdir: /home/ec2-user/calculator
+    - name: Run npm start
+      command: 
+        cmd: npm start &
+        chdir: /home/ec2-user/calculator
